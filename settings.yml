@@ -1,6 +1,26 @@
 blocks:
   default: >-
-    []
+    [
+      {
+        "name": "Tag Topics",
+        "params": [
+          {
+            "name": "tag",
+            "value": "announcement"
+          }
+        ]
+      },
+      {
+        "name": "minimal-gamification-leaderboard",
+        "params": [
+          {
+            "name": "id",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+
   json_schema: >-
     {
       "type": "array",
@@ -32,7 +52,7 @@ blocks:
 show_in_routes:
   type: list
   list_type: "simple"
-  default: ""
+  default: "discovery.categories"
   description: "Advanced users only: limit sidebar to the selected routes. <br/><br/>Examples: discovery.latest, discovery.unread, discovery.new, discovery.top, tag.show, \"c/category-slug\" (for categories), \"tag/sample-tag\" (for tags). <br/><br/>When empty, the sidebar is shown on all list routes."
   allow_any: true
   choices:
